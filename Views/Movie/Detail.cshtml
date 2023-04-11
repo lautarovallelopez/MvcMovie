@@ -1,0 +1,13 @@
+@model Movie
+
+<h2>@Model.Name</h2>
+
+<p>Duracion: @Model.Minutes</p>
+
+<p>@Model.Review</p>
+
+<form 
+    method="post"
+    onsubmit="return confirm('Estas seguro de eliminar esta pelicula?')">
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+</form>
