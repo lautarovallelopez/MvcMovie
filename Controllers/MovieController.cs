@@ -43,7 +43,8 @@ public class MovieController : Controller
     }
 
     [HttpPost]
-    public IActionResult Delete(){
+    public IActionResult Delete(string code){
+        MovieService.Delete(code);
         return RedirectToAction("Index");
     }
 }
